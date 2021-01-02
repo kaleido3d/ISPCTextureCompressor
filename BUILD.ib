@@ -1,0 +1,15 @@
+source_set("ipsc_texcompress_pri") {
+    sources = [ 
+        "ispc_texcomp/ispc_texcomp_astc.cpp",
+        "ispc_texcomp/ispc_texcomp.cpp",
+        "ispc_texcomp/kernel_astc.ispc",
+        "ispc_texcomp/kernel.ispc",
+        "ispc_texcomp/kernel_ispc.h",
+        "ispc_texcomp/kernel_astc_ispc.h",
+        "ispc_texcomp/ispc_texcomp.h"
+    ]
+}
+
+shared_library("ispc_texcomp") {
+    deps = [ ":ipsc_texcompress_pri" ]
+}
